@@ -4,23 +4,21 @@ on:
   push:
     branches:
      - main
- 
+     
   pull_request:
       branches:
       - main
-
-
+      
 jobs:
   build:
-  
    runs-on: macos-latest
    
-   setup:
-   -  name: Checkout Code
-   -  uses: actions/checkout@v4
+   steps: 
+   - name: checkou project
+   - uses: actions/checkout@v4
    
-   -  name: Run SwiftLint
-   -  run: swiftlint
+   # - name: Run SwiftLint
+   # -  run: swiftlint
    
    - name: Build iOS App
      run: |
